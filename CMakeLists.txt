@@ -17,6 +17,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Quick REQUIRED)
 set(PROJECT_SOURCES
         src/main.cpp
         qml/qml.qrc
+        include/texttools.h src/texttools.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
