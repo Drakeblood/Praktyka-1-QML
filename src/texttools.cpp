@@ -41,11 +41,8 @@ QString TextTools::inputTextAreaText() const
 
 void TextTools::setinputTextAreaText(QString value)
 {
-    if(inputTextAreaTextNative != value)
-    {
-        inputTextAreaTextNative = value;
-        emit inputTextAreaTextChanged();
-    }
+    inputTextAreaTextNative = value;
+    emit inputTextAreaTextChanged();
 }
 
 QString TextTools::resultTextAreaText() const
@@ -55,11 +52,8 @@ QString TextTools::resultTextAreaText() const
 
 void TextTools::setResultTextAreaText(QString value)
 {
-    if(resultTextAreaTextNative != value)
-    {
-        resultTextAreaTextNative = value;
-        emit resultTextAreaTextChanged();
-    }
+    resultTextAreaTextNative = value;
+    emit resultTextAreaTextChanged();
 }
 
 TextTools::TextProcessMethod TextTools::textProcessMethod() const
@@ -78,7 +72,8 @@ void TextTools::setTextProcessMethod(TextProcessMethod value)
 
 void TextTools::ReverseProcess()
 {
-    for(long long i = 0; i < 500000000; i++)
+    //asynchronous test
+    for(long long i = 0; i < 300000000; i++)
     {
         int a = 2;
         a++;

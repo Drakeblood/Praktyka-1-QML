@@ -19,6 +19,7 @@ Window {
 
     Connections{
         target: textTools
+
         function onResultTextAreaTextChanged() {
             busyIndicator.running = false
             swipeView.setCurrentIndex(1);
