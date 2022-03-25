@@ -1,3 +1,5 @@
+#include "include/texttools.h"
+
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
@@ -8,6 +10,8 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
     QGuiApplication app(argc, argv);
+
+    qmlRegisterType<TextTools>("Praktyka.TextTools", 1, 0, "TextTools");
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
